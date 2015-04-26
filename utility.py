@@ -16,6 +16,10 @@ import requests
 import json
 from subprocess import Popen, PIPE
 import wx
+import urllib2
+import os
+import re
+import config
 
 def read_txid():
         with open('/home/ftc/featherPay/txid.log', 'r') as f:
@@ -62,4 +66,28 @@ def get_balance():
     balance = output['balance'];
     return balance
         
+def get_value():
+    #get the current USD to currency rate from fixer.io
+    c_url = 'http://api.fixer.io/latest?base=USD'
+    c_data = json.loads(urllib2.urlopen(c_url).read())
+    c_rate = float(c_data ['rates'][config.currency])
+    print c_rate
 
+    #get the current btc/usd rate from cryptocoincharts
+    b_url = 'http://api.cryptocoincharts.info/tradingPair/btc_usd'
+    b_data = json.loads(urllib2.urlopen(b_url).read())
+    b_rate = float(b_data ['price'])
+    print b_rate
+
+    #get the current coin/btc rate from cryptocoincharts
+    coin_url = "http://api.cryptocoincharts.info/tradingPair/%s_btc" % config.coin
+    coin_data = json.loads(urllib2.urlopen(coin_url).read())
+    coin_rate = float(coin_data ['price'])
+    print coin_rate
+
+    coin_value = coin_rate * b_rate * c_rate
+    print coin_value
+
+    cvalue = round(float(coin_value) ,6)
+    return cvalue
+    print cvalue

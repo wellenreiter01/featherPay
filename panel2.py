@@ -14,7 +14,7 @@
 
 import wx
 import gui
-import ftc
+from utility import get_value
 import platform
 from utility import OnEraseBackground
 import time
@@ -40,7 +40,7 @@ class Panel2(gui.panel_two):
         self.params = params
         self.tamount.SetValue("")
         self.tamount.SetFocus()
-        self.params['fvalue'] = ftc.toFTC(1)
+        self.params['fvalue'] = get_value()
         self.ftcvalue.SetLabel(str(self.params['fvalue']))
         self.Show()
 
