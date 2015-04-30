@@ -38,7 +38,7 @@ class Panel1(gui.panel_one):
         self.Hide()
 
     def __get_txid(self):
-        with open('/home/ftc/featherPay/txid.log','r+') as f:
+        with open('/home/featherpay/featherPay/txid.log','r+') as f:
             txid = str(int(f.read().strip())+1)
             f.seek(0)
             f.write(txid)

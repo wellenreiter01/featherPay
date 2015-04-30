@@ -55,7 +55,7 @@ class panel_one ( wx.Panel ):
 		
 		bSizer2 = wx.BoxSizer( wx.VERTICAL )
 		
-		self.button1 = wx.BitmapButton( self, wx.ID_ANY, wx.Bitmap( u"/home/ftc/featherPay/images/accept-button-240x320.jpg", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, wx.BU_AUTODRAW )
+		self.button1 = wx.BitmapButton( self, wx.ID_ANY, wx.Bitmap( u"/home/featherpay/featherPay/images/accept-button-240x320.jpg", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, wx.BU_AUTODRAW )
 		self.button1.SetMinSize( wx.Size( 240,320 ) )
 		
 		self.button1.SetMinSize( wx.Size( 240,320 ) )

@@ -51,7 +51,7 @@ class Panel3(gui.panel_three):
         ## create qrcode
         self.__createQRCode(self.params['txid'], self.params['paddress'], ftotal)
         ##resize image for use in process frame
-        qrFile = ("/home/ftc/featherPay/images/qrcodes/%s.png" % self.params['txid'])
+        qrFile = ("/home/featherpay/featherPay/images/qrcodes/%s.png" % self.params['txid'])
         img_org = Image.open(qrFile)
         width_org, height_org = img_org.size
         factor = 0.32
@@ -87,5 +87,5 @@ class Panel3(gui.panel_three):
         qr.add_data(qrdata)
         qr.make()
         im = qr.make_image()
-        im.save("/home/ftc/featherPay/images/qrcodes/%s.png" % txid)
+        im.save("/home/featherpay/featherPay/images/qrcodes/%s.png" % txid)
 

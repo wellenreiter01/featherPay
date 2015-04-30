@@ -22,7 +22,7 @@ import re
 import config
 
 def read_txid():
-        with open('/home/ftc/featherPay/txid.log', 'r') as f:
+        with open('/home/featherpay/featherPay/txid.log', 'r') as f:
             txid = str(f.readline())
             txid = txid.replace("\n", "")
             print 'read_txid ' + txid
@@ -45,7 +45,7 @@ def OnEraseBackground(evt):
         rect = self.GetUpdateRegion().GetBox()
         dc.SetClippingRect(rect)
     dc.Clear()
-    bmp = wx.Bitmap("/home/ftc/featherPay/images/background.jpg")
+    bmp = wx.Bitmap("/home/featherpay/featherPay/images/background.jpg")
     dc.DrawBitmap(bmp, 0, 0)            
 
 ##check number of confirms for 'paddress' 
