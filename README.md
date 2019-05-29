@@ -5,7 +5,7 @@ Information on purpose and use can be found in the [GitHub Wiki] (https://github
 
 Futher information can be found at 
 
-* https://forum.feathercoin.com/index.php?/topic/7206-dev-introducing-featherpay-point-of-sales-device/
+* https://forum.feathercoin.com/topic/6980/dev-introducing-featherpay-point-of-sales-device
 
 You can help support the development of featherPay, by donating to the following addresses
 
